@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KunVerse</title>
+    <style>
+        body {
+            background-color: #f0f4f8; /* A light grey-blue background */
+            font-family: Arial, sans-serif; /* Default sans-serif font */
+            margin: 0;
+            padding: 0;
+        }
+        .top-bar {
+            background-color: #007BFF; /* A nice shade of blue */
+            padding: 10px 20px;
+            text-align: right; /* Aligns the image to the right */
+        }
+        .top-bar img {
+            height: 50px; /* Adjust based on your image's aspect ratio */
+            cursor: pointer; /* Changes the mouse cursor to suggest this is clickable */
+        }
+        h1 {
+            font-size: 24px;
+            color: blue;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px; /* Spacing from the top */
+        }
+        .main-image {
+            display: block; /* Ensures it centers in the div */
+            margin: 20px auto; /* Centers the image horizontally and gives some space top and bottom */
+            max-width: 90%; /* Makes sure it does not overflow on small devices */
+        }
+        .copy-text {
+            cursor: pointer; /* Changes the mouse cursor to suggest this is clickable */
+            text-align: center;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+        .server-info {
+            color: blue;
+            font-family: 'Times New Roman', serif; /* Default serif font */
+            text-align: center;
+            margin-top: 5px;
+        }
+    </style>
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert("Server address copied to clipboard!");
+            }, () => {
+                alert("Failed to copy text to clipboard");
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="top-bar">
+        <img src="kun.jpg" alt="Kun" onclick="window.location='console.html';">
+    </div>
+    <h1>Welcome to KunVerse!!</h1>
+    <img src="kunverse.jpg" alt="KunVerse Image" class="main-image">
+    <div class="copy-text" onclick="copyToClipboard('kunverse.aternos.me:43823')">
+        kunverse.aternos.me:43823
+    </div>
+    <div class="server-info">
+        The Server may not always be online though...
+    </div>
+</body>
+</html>
